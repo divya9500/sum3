@@ -1,0 +1,30 @@
+#Eliminating numeric values in given string
+
+
+package Assessment3;
+
+import java.util.Scanner;
+
+public class EliminateNumeric {
+    static String str="";
+    public  String removeNum(String s1){
+        for(int i=0;i<s1.length();i++){
+            char c=s1.charAt(i);
+            if(c>=48&&c<=57){
+                continue;
+            }
+            str=str+c;
+        }
+        return str;
+    }
+    public static void main(String args[]){
+        Scanner s=new Scanner(System.in);
+        EliminateNumeric o=new EliminateNumeric();
+
+        System.out.println("enter the String:");
+        String  s1=s.next();
+
+        o.removeNum(s1);
+        System.out.println(str);
+    }
+}
